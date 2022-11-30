@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@300;400;700&family=Vollkorn:ital@1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            font-size: 62.5%;
+            --ff1: 'Roboto Condensed', sans-serif;
+            --ff2: 'Roboto', sans-serif;
+            --ff3: 'Vollkorn', serif;
+            --main-color: #c7aa8b;
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+    
+        header {
+            background-color: #333;
+            height: 7rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-bottom: 1px solid rgba(107, 107, 107, 0.74);
+        }
+    
+        .logo a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-left: 3vw;
+        }
+        .logo img {
+            height: 2.5rem;
+            margin-left: 1rem;
+        }
+    
+        .header-button {
+            background: transparent;
+            border: 0;
+        }
+        .header-button:hover {
+            cursor: pointer;
+        }
+    
+        .header-img {
+            margin-right: 5vw;
+        }
+    
+        .header-img path {
+            width: 24px;
+            height: 24px;
+        }
+    
+        .logo-title {
+            color: white;
+            font-family: var(--ff1);
+            text-transform: uppercase;
+            font-size: 2rem;
+        }
+        div img {
+            height: 4rem;
+        }
+    
+        .header-nav {
+            position: absolute;
+            bottom: -18rem;
+            left: 0;
+            font-size: 1.6rem;
+            width: 100%;
+            background-color:#272727;
+            display: flex;
+            flex-flow: column;
+        }
+    
+        .header-nav li {
+            font-family: var(--ff1);
+            text-transform: uppercase;
+            height: 6rem;
+            border: 1px solid rgba(189, 189, 189, 0.055);
+            display: flex;
+            padding-left: 2rem;
+            align-items: center;
+            letter-spacing: .2rem;
+            font-weight: lighter;
+        }
+    
+        .header-nav a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.747);
+        }
+        .header-nav li:hover {
+            background-color: black;
+        }
+    
+        .off {
+            display: none;
+        }
+    
+        .ondisplay {
+            display: inherit;
+            z-index: 2;
+        }
+        footer {
+            background-color: #323232;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        footer img {
+            padding-top: 2rem;
+            margin: auto;
+        }
+
+        footer a {
+            width: 90%;
+        }
+
+        footer button {
+            font-family: var(--ff1);
+
+            width: 100%;
+            border: 2px solid #c7aa8b;
+            color: #c7aa8b;
+            font-size: 1.6rem;
+            padding: 1rem 0;
+            background-color: transparent;
+            text-transform: uppercase;
+            transition: all .5s;
+        }
+
+        footer button:hover {
+            color: #323232;
+            background-color: #c7aa8b;
+            cursor: pointer;
+        }
+
+        footer p {
+            color:rgba(128, 128, 128, 0.774);
+            font-size: 1.6rem;
+            font-family: var(--ff1);
+            margin-bottom: 2rem;
+        }
+        main {
+            padding: 4rem 4rem 4rem 4vw;
+            font-family: var(--ff1);
+            color: var(--main-color);
+            font-size: 2rem;
+            background-color: #333;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+
+        main h1 {
+            font-weight: normal;
+        }
+
+        .line-beige {
+            margin: 2rem 0 3rem 0;
+            height: .2rem;
+            background-color: var(--main-color);
+            width: 12%;
+        }
+
+        main p {
+            font-family: var(--ff3);
+            color:rgba(189, 189, 189, 0.829);
+        }
+
+        .info {
+            height: 30rem;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            font-family: var(--ff1);
+            color:#4e4e4e;
+        }
+        .info h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            padding: 3.5rem 0;
+        }
+        .info div {
+            margin: .5rem auto;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+        .info div img {
+            width: 3.5rem;
+        }
+        .info div:nth-child(3) img {
+            width: 2.5rem;
+        }
+
+        .content {
+            display: flex;
+            gap: 2rem;
+        }
+        .form {
+            background-color: var(--main-color);
+            display: flex;
+            justify-content: center;
+            padding: 4rem 0;
+        }
+        form {
+            width: 95%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        form input, textarea {
+            width: 100%;            
+            padding: 2rem 1rem;
+            font-family: var(--ff1);
+            font-size: 1.8rem;
+            border: 0;
+        }
+        textarea {
+            height: 8rem;
+        }
+        form button {
+            font-family: var(--ff1);
+            background-color: #323232;
+            color: var(--main-color);
+            border: 2px solid #323232;
+            padding: .8rem 1.5rem;
+            font-size: 1.6rem;
+            margin: 2.2rem 0;
+            transition: all 0.3s;
+        }
+        form button:hover {
+            color: #323232;
+            cursor: pointer;
+            background-color: var(--main-color);
+        }
+        form p {
+            font-size: 1.4rem;
+            font-family: var(--ff1);
+        }
+
+        .container {
+            height: 60rem;
+        }
+
+        @media (min-width: 800px) {
+            .container {
+                display: flex;
+                justify-content: center;
+                gap: 4rem;
+            }
+            form {
+                width: 85%;
+                align-items: flex-start;
+            }
+            .form {
+                width: 50rem;
+            }
+        }
+
+        @media (min-width: 1100px) {
+            .container {
+                height: 60rem;
+            }
+            .form {
+                width: 70rem;
+            }
+            .info {
+                width: 30rem;
+            }
+            .info p {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="https://uploads-ssl.webflow.com/636ab256faeb12b1eb5e70b6/636ab256faeb1207f75e70cb_stone-webclip.png" alt="Stone logo">
+                <p class="logo-title">Stone</p>
+            </a>
+        </div>
+        <div class="header-img">
+            <button class="header-button">
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="24.75px" height="24.75px" viewBox="0 0 24.75 24.75" style="enable-background:new 0 0 24.75 24.75;" xml:space="preserve"
+                    >
+                <g>
+                    <path class="header-path" fill="lightgray" d="M0,3.875c0-1.104,0.896-2,2-2h20.75c1.104,0,2,0.896,2,2s-0.896,2-2,2H2C0.896,5.875,0,4.979,0,3.875z M22.75,10.375H2
+                        c-1.104,0-2,0.896-2,2c0,1.104,0.896,2,2,2h20.75c1.104,0,2-0.896,2-2C24.75,11.271,23.855,10.375,22.75,10.375z M22.75,18.875H2
+                        c-1.104,0-2,0.896-2,2s0.896,2,2,2h20.75c1.104,0,2-0.896,2-2S23.855,18.875,22.75,18.875z"/>
+                </g>
+                </svg>
+            </button>
+            <ul class="header-nav off"> 
+                <a href="../index.html"><li>Home</li></a>
+                <a href="./work.html"><li>Work</li></a>
+                <a href="./contact.html"><li>Contact</li></a>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1>Let's have a conversation</h1>
+        <div class="line-beige"></div>
+        <p>"Talking to these guys was actually fun! Their work was amazing." - Some client</p>
+    </main>
+
+    <div class="container">
+        <section class="info">
+            <h2>Get in touch</h2>
+            <div class="content">
+                <div>
+                    <img src="../svg/mail.svg" alt="mail icon">
+                    <p>contact@stoneagency.com</p>
+                </div>
+                <div>
+                    <img src="../svg/location.svg" alt="target icon location">
+                    <p>1423 Elk Street</p>
+                    <p>Brooklyn, NY 82328</p>
+                </div>
+            </div>
+        </section>
+        <section class="form">
+            <form>
+                <input type="text" name="" id="" placeholder="NAME" required>
+                <input type="email" name="" id="" placeholder="EMAIL" required>
+                <input type="email" name="" id="" placeholder="BUDGET" required>
+                <textarea name="" id="" cols="10" rows="10" maxlength="4000" placeholder="PROJECT DESCRIPTION" required></textarea>
+                <button>SEND EMAIL</button>
+                <p>We'll get back to you within 48 hours.</p>
+            </form>
+        </section>
+    </div>
+
+
+
+
+    <footer>
+        <div><img src="../svg/gray-icon.svg" alt="stone icon gray color"><p class="off">2022 Stone Creative Agency</p></div>
+        <a href=""><button class="footer-button">Get in touch with us</button></a>
+            <p>1423 Elk St, Brooklyn NY, 82328</p>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
